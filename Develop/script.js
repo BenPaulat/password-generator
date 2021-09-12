@@ -13,7 +13,7 @@ function generatePassword() {
   var numberCharacters = "0123456789";
   var specialCharacters = "!#$%&()*+,-./:;<=>?@[\]^_`{|}~";
 
-  var characterOption = "";  
+  var characterOption = "";
 
   if (passwordLowercase === true) {
     characterOption = characterOption + lowercaseLetters
@@ -27,8 +27,18 @@ function generatePassword() {
   if (passwordSpecial === true) {
     characterOption = characterOption + specialCharacters
   }
-  
-  console.log(characterOption)
+
+  function selector(min) {
+    var index = Math.floor(Math.random() * min);
+    console.log(characterOption.length);
+
+  }
+
+  selector(10);
+
+
+
+
 
   var password = "";
 }
