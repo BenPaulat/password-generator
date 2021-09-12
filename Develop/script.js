@@ -1,11 +1,36 @@
 // Assignment code here
 function generatePassword() {
-  // variables for criteria defined
-  var passwordLength = window.prompt("Please select password length (must be at least 8 characters and no more than 128).")
-  // var passwordCharacters = window.prompt("Please select character types to include. Choose from lowercase, uppercase, numeric, and/or special characters.")
-  
-  passwordLength
 
+  // variables for criteria defined
+  var passwordLength = prompt("Please select password length (must be at least 8 characters and no more than 128).");
+  var passwordLowercase = window.confirm("Include Lowercase characters in your password? (OK for Yes, Cancel for No)");
+  var passwordUppercase = window.confirm("Include Uppercase characters in your password? (OK for Yes, Cancel for No)");
+  var passwordNumeric = window.confirm("Include Numbers in your password? (OK for Yes, Cancel for No)");
+  var passwordSpecial = window.confirm("Include Special characters in your password? (OK for Yes, Cancel for No)");
+
+  var lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
+  var uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var numberCharacters = "0123456789";
+  var specialCharacters = "!#$%&()*+,-./:;<=>?@[\]^_`{|}~";
+
+  var characterOption = "";  
+
+  if (passwordLowercase === true) {
+    characterOption = characterOption + lowercaseLetters
+  }
+  if (passwordUppercase === true) {
+    characterOption = characterOption + uppercaseLetters
+  }
+  if (passwordNumeric === true) {
+    characterOption = characterOption + numberCharacters
+  }
+  if (passwordSpecial === true) {
+    characterOption = characterOption + specialCharacters
+  }
+  
+  console.log(characterOption)
+
+  var password = "";
 }
 
 // Get references to the #generate element
