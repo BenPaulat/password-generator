@@ -13,7 +13,7 @@ function generatePassword() {
     return generatePassword();
   }
 
-  if (passwordLength < 8 || passwordLength > 128) {
+  if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength) === true) {
     window.alert("Invalid length. Please choose a password length between 8 and 128 characters.");
     return generatePassword();
   }
