@@ -11,10 +11,11 @@ function generatePassword() {
   var lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
   var uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var numberCharacters = "0123456789";
-  var specialCharacters = "!#$%&()*+,-./:;<=>?@[\]^_`{|}~";
+  var specialCharacters = "!#$%&()*+,-./:;<=>?@]/[^_`{|}~";
 
   var characterOption = "";
 
+  // characterOption builder section
   if (passwordLowercase === true) {
     characterOption = characterOption + lowercaseLetters
   }
@@ -28,18 +29,16 @@ function generatePassword() {
     characterOption = characterOption + specialCharacters
   }
 
-  function selector(min) {
+  // index number random selector
+  function indexSelector(min) {
     var index = Math.floor(Math.random() * min);
-    console.log(characterOption.length);
-
   }
 
-  selector(10);
+  // run indexSelector to randomly chose index number based on the length of characterOption
+  indexSelector(characterOption.length);
 
 
-
-
-
+  
   var password = "";
 }
 
